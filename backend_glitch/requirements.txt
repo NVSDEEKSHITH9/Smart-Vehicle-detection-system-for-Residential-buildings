@@ -1,0 +1,8 @@
+pandas
+numpy
+flask
+gunicorn
+sqlite3
+requests
+pytesseract
+opencv-python

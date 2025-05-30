@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Logs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Detection Records</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr><th>tid</th><th>car_number</th><th>timestamp</th></tr>
+        </thead>
+        <tbody>
+        {% for row in records %}
+            <tr>
+                <td>{{ row.tid }}</td>
+                <td>{{ row.car_number }}</td>
+                <td>{{ row.timestamp }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-secondary mt-3">← Back to Dashboard</a>
+</div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Logs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="text-center mb-4">📄 Vehicle Detection Logs</h2>
+    <a href="{{ url_for('admin_dashboard') }}" class="btn btn-secondary mb-3">⬅ Back to Dashboard</a>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>TID</th>
+                <th>Car Number</th>
+                <th>Name</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in records %}
+            <tr>
+                <td>{{ row['tid'] }}</td>
+                <td>{{ row['car_number'] }}</td>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['timestamp'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

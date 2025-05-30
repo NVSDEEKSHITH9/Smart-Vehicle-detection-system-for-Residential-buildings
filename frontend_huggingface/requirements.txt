@@ -1,0 +1,9 @@
+ultralytics
+easyocr
+opencv-python
+gradio
+pillow
+requests
+numpy
+paddlepaddle
+paddleocr
